@@ -27,4 +27,16 @@ public class ParsaController {
         mv.setViewName("welcome");
         return mv;
     }
+
+
+    /**
+     * this method do above method job in spring style
+     */
+    @RequestMapping("/spring-multiparam")
+    public ModelAndView multiParamWelcome(WelcomeParams params) {
+        ModelAndView mv = new ModelAndView();
+        mv.addObject("obj", params);
+        mv.setViewName("multiparam");
+        return mv;
+    }
 }
